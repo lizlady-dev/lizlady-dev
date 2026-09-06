@@ -1,1 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liz Lady Sanchez Apaza — Curriculum Vitae</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Work+Sans:wght@400;500;600;700&display=swap');
 
+  :root{
+    --ink:#1c2b33;
+    --ink-soft:#4b5b63;
+    --paper:#faf9f6;
+    --panel:#16262b;
+    --panel-text:#e7ede9;
+    --panel-muted:#9db2ac;
+    --accent:#7a3b2e;
+    --accent-soft:#c98a6f;
+    --line:#dcd6cb;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    background:#e9e6df;
+    font-family:'Work Sans',sans-serif;
+    color:var(--ink);
+    display:flex;
+    justify-content:center;
+    padding:40px 16px;
+  }
+
+  .page{
+    background:var(--paper);
+    width:100%;
+    max-width:960px;
+    display:grid;
+    grid-template-columns:290px 1fr;
+    box-shadow:0 20px 50px rgba(20,25,25,0.18);
+  }
+
+  /* SIDEBAR */
+  .sidebar{
+    background:var(--panel);
+    color:var(--panel-text);
+    padding:48px 32px;
+  }
+
+  .sidebar .name{
+    font-family:'Source Serif 4',serif;
+    font-weight:700;
+    font-size:28px;
+    line-height:1.15;
+    letter-spacing:0.2px;
+    margin:0 0 6px 0;
+  }
+
+  .sidebar .role{
+    font-size:13.5px;
+    color:var(--panel-muted);
+    margin:0 0 34px 0;
+    line-height:1.5;
+  }
+
+  .sb-section{margin-bottom:32px;}
+
+  .sb-heading{
+    font-size:11.5px;
+    letter-spacing:1.4px;
+    color:var(--accent-soft);
+    font-weight:600;
+    margin:0 0 12px 0;
+    border-bottom:1px solid rgba(231,237,233,0.18);
+    padding-bottom:8px;
+  }
+
+  .contact-item{
+    font-size:13.5px;
+    line-height:1.6;
+    margin-bottom:8px;
+    color:var(--panel-text);
+    word-break:break-word;
+  }
+
+  .contact-item span{
+    display:block;
+    font-size:10.5px;
+    color:var(--panel-muted);
+    letter-spacing:0.4px;
+    margin-bottom:1px;
+  }
+
+  .edu-item{margin-bottom:16px;}
+  .edu-item:last-child{margin-bottom:0;}
+  .edu-title{font-size:13.5px;font-weight:600;line-height:1.4;color:var(--panel-text);}
+  .edu-sub{font-size:12.5px;color:var(--panel-muted);margin-top:2px;line-height:1.4;}
+
+  .course-item{
+    font-size:12.5px;
+    line-height:1.55;
+    color:var(--panel-text);
+    margin-bottom:12px;
+    padding-left:14px;
+    position:relative;
+  }
+  .course-item::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:7px;
+    width:5px;
+    height:5px;
+    background:var(--accent-soft);
+    border-radius:50%;
+  }
+  .course-item:last-child{margin-bottom:0;}
+
+  /* MAIN */
+  .main{padding:48px 44px;}
+
+  .profile-text{
+    font-size:14.5px;
+    line-height:1.75;
+    color:var(--ink-soft);
+    margin:0 0 40px 0;
+    max-width:64ch;
+  }
+
+  .main-heading{
+    font-family:'Source Serif 4',serif;
+    font-size:15px;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 20px 0;
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .main-heading::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+
+  .timeline{
+    position:relative;
+    padding-left:26px;
+    border-left:2px solid var(--line);
+  }
+
+  .entry{
+    position:relative;
+    padding-bottom:30px;
+  }
+  .entry:last-child{padding-bottom:0;}
+
+  .entry::before{
+    content:"";
+    position:absolute;
+    left:-31px;
+    top:5px;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:var(--paper);
+    border:2px solid var(--accent);
+  }
+
+  .entry-date{
+    font-size:11.5px;
+    letter-spacing:0.6px;
+    color:var(--accent);
+    font-weight:600;
+    margin-bottom:4px;
+  }
+
+  .entry-title{
+    font-family:'Source Serif 4',serif;
+    font-size:16px;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 3px 0;
+  }
+
+  .entry-org{
+    font-size:13px;
+    color:var(--ink-soft);
+    font-weight:500;
+    margin-bottom:9px;
+  }
+  .entry-org em{font-style:normal;color:#8a7d6f;}
+
+  .entry-desc{
+    font-size:13.5px;
+    line-height:1.65;
+    color:var(--ink-soft);
+    max-width:66ch;
+  }
+
+  .note{
+    margin-top:10px;
+    font-size:12px;
+    color:#a15b3f;
+    background:#f6e9e2;
+    border-left:3px solid var(--accent);
+    padding:8px 12px;
+    line-height:1.5;
+    max-width:60ch;
+  }
+
+  .experience-block{margin-bottom:44px;}
+  .experience-block:last-child{margin-bottom:0;}
+
+  @media (max-width:720px){
+    .page{grid-template-columns:1fr;}
+    .sidebar{padding:36px 26px;}
+    .main{padding:36px 26px;}
+  }
+
+  @media print{
+    body{background:#fff;padding:0;}
+    .page{box-shadow:none;max-width:100%;}
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <aside class="sidebar">
+    <p class="name">Liz Lady<br>Sanchez Apaza</p>
+    <p class="role">Bachiller en Ingeniería Estadística e Informática</p>
+
+    <div class="sb-section">
+      <p class="sb-heading">CONTACTO</p>
+      <p class="contact-item"><span>DNI</span>74151871</p>
+      <p class="contact-item"><span>EMAIL</span>leidysanchezapaza2@gmail.com</p>
+      <p class="contact-item"><span>TELÉFONO</span>+51 984 328 432</p>
+      <p class="contact-item"><span>DOMICILIO</span>Psj. Nuevo Progreso Mz-E Lt-06, Puno</p>
+    </div>
+
+    <div class="sb-section">
+      <p class="sb-heading">EDUCACIÓN</p>
+      <div class="edu-item">
+        <p class="edu-title">Bachiller en Ingeniería Estadística e Informática</p>
+        <p class="edu-sub">Universidad Nacional del Altiplano</p>
+      </div>
+      <div class="edu-item">
+        <p class="edu-title">Especialista en Ofimática</p>
+        <p class="edu-sub">Instituto de Informática — UNA</p>
+      </div>
+      <div class="edu-item">
+        <p class="edu-title">Inglés Avanzado</p>
+        <p class="edu-sub">Centro Cultural Peruano Norteamericano</p>
+      </div>
+    </div>
+
+    <div class="sb-section">
+      <p class="sb-heading">CAPACITACIÓN Y SEMINARIOS</p>
+      <p class="course-item">Curso virtual "Sistema de Focalización de Hogares (SISFOH)" — Edición II, oct.–dic. 2024</p>
+      <p class="course-item">Seminario virtual "Georreferenciación en la Labor de Empadronamiento de Hogares", oct. 2024</p>
+      <p class="course-item">II Congreso Internacional CINCIT 2019 — 120 horas académicas</p>
+      <p class="course-item">Taller de Scrum: Aplicaciones Prácticas — CINCIT 2019</p>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <p class="main-heading">Perfil profesional</p>
+    <p class="profile-text">
+      Bachiller en Ingeniería Estadística e Informática por la Universidad Nacional del Altiplano, con experiencia consolidada en la organización y supervisión de procesos electorales y censales a nivel nacional (ONPE e INEI), así como en gestión administrativa municipal. Cuenta con capacidad probada de liderazgo de equipos en campo, coordinación con autoridades y entidades de seguridad, y manejo de procedimientos técnicos bajo presión y plazos ajustados. Destaca por su orientación a resultados, facilidad para establecer relaciones interpersonales, habilidades de planificación y elaboración de informes, y un compromiso constante con el aprendizaje y el crecimiento profesional.
+    </p>
+
+    <p class="main-heading">Experiencia profesional</p>
+    <div class="timeline">
+
+      <div class="entry">
+        <p class="entry-date">MAYO 2026 — JUNIO 2026 · JULI</p>
+        <p class="entry-title">Responsable de Local de Votación</p>
+        <p class="entry-org">ONPE — Segunda Elección Presidencial 2026</p>
+        <p class="entry-desc">Dirigió y coordinó al personal del local de votación durante la jornada electoral. Organizó la capacitación, acondicionamiento y señalización del local, y la recepción y control del material electoral. Reportó incidencias, administró el centro de acopio y coordinó con autoridades electorales, PNP y FF. AA. el traslado de actas y material electoral hacia la ODPE.</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-date">MARZO 2026 — ABRIL 2026 · JULI</p>
+        <p class="entry-title">Coordinador de Mesa</p>
+        <p class="entry-org">ONPE — Elecciones Generales 2026</p>
+        <p class="entry-desc">Brindó capacitación y asistencia a miembros de mesa y actores electorales. Apoyó la gestión, control y traslado de material electoral, el acondicionamiento de locales de votación y la atención de incidencias, elaborando informes y coordinando con el equipo responsable.</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-date">JULIO 2025 — OCTUBRE 2025 · DESAGUADERO</p>
+        <p class="entry-title">Jefe de Sección Censal</p>
+        <p class="entry-org">INEI — Censos Nacionales: XIII de Población, VIII de Vivienda y IV de Comunidades Indígenas</p>
+        <p class="entry-desc">Supervisó y coordinó el trabajo censal en campo, liderando a los censistas para asegurar la cobertura total de viviendas y hogares asignados. Verificó la calidad de la información recolectada y gestionó incidencias operativas conforme a los lineamientos técnicos del censo digital.</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-date">ABRIL 2025 — JULIO 2025 · DESAGUADERO</p>
+        <p class="entry-title">Asistente Administrativa</p>
+        <p class="entry-org">Consorcio APU LIVINI — Mejoramiento del servicio deportivo, estadio Lupaca</p>
+        <p class="entry-desc">Brindó apoyo administrativo en la ejecución de la obra: control y registro de documentos, elaboración de informes, seguimiento de requerimientos y control de asistencia del personal, coordinando con logística y contabilidad.</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-date">OCTUBRE 2024 — DICIEMBRE 2024 · DESAGUADERO</p>
+        <p class="entry-title">Empadronador y Digitador</p>
+        <p class="entry-org">Municipalidad Distrital de Desaguadero — Unidad Local de Empadronamiento</p>
+        <p class="entry-desc">Brindó servicios de empadronamiento a ciudadanos de primera prioridad en ámbito urbano y rural, realizando la digitación de formatos FSU, S100 y NV100.</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-date">ABRIL 2024 — SETIEMBRE 2024 · DESAGUADERO</p>
+        <p class="entry-title">Administrador</p>
+        <p class="entry-org">Municipalidad de Centro Poblado de Lupaka - Desaguadero</p>
+        <p class="entry-desc">Elaboró documentos, informes y solicitudes para las actividades institucionales, apoyando a las entidades del centro poblado de Lupaka.</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-date"><em>FECHAS A CONFIRMAR</em> · PUNO</p>
+        <p class="entry-title">Documentación</p>
+        <p class="entry-org">Amitel Perú Telecomunicaciones S.A.C.</p>
+        <p class="entry-desc">Se desempeñó en el área de documentación del proyecto de instalación de banda ancha para la conectividad integral y el desarrollo social de la región de Puno.</p>
+        <p class="note">Las fechas de esta experiencia en el documento original son inconsistentes (inicio posterior al término). Verificar el periodo exacto antes de enviar el CV.</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-date">MARZO 2022 — JULIO 2022 · PUNO</p>
+        <p class="entry-title">Prácticas Pre-Profesionales</p>
+        <p class="entry-org">Oficina de Tecnologías de Información (OTI) — Universidad Nacional del Altiplano</p>
+        <p class="entry-desc">Desarrolló prácticas en la Sub Unidad de Sistemas de Gestión de Calidad de la OTI, bajo modalidad presencial, aplicando los conocimientos adquiridos durante su formación profesional.</p>
+      </div>
+
+    </div>
+  </main>
+</div>
+</body>
+</html>
