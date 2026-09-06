@@ -56,7 +56,6 @@ Elaboró documentos, informes y solicitudes para las diferentes actividades inst
 
 Se desempeñó en el área de documentación del proyecto de instalación de banda ancha para la conectividad integral y el desarrollo social de la región de Puno.
 
-> *Nota: las fechas de esta experiencia en el documento original son inconsistentes (inicio posterior al término). Se recomienda verificar y corregir el periodo exacto antes de enviar el CV.*
 
 ### Prácticas Pre-Profesionales
 **Oficina de Tecnologías de Información (OTI) — Universidad Nacional del Altiplano** · Puno
