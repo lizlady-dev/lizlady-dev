@@ -1,4 +1,3 @@
-# PRACTICA-2
 # LIZ LADY SANCHEZ APAZA
 
 **Bachiller en Ingeniería Estadística e Informática**
